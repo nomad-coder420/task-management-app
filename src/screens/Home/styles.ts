@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   footerContainer: {
     paddingHorizontal: 24,
     marginTop: 16,
+    paddingBottom: 16,
   },
 });
 
