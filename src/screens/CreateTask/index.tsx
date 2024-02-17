@@ -30,7 +30,7 @@ const CreateTaskScreen = ({navigation}: INavigationScreenProps) => {
             multiline
           />
         </View>
-        <View>
+        <View style={styles.footer}>
           <Button
             text="Save"
             onPress={() => {
@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     paddingTop: 16,
+  },
+  footer: {
+    paddingBottom: 16,
   },
 });
 

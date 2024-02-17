@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 16,
+    paddingTop: 16,
   },
   headerIcon: {
     height: 24,
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 24,
     fontWeight: '600',
+    color: '#000000',
   },
 });
 

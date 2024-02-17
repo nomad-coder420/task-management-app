@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     lineHeight: 32,
     fontWeight: '600',
+    color: '#000000',
   },
   timeContainer: {
     display: 'flex',
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 24,
     fontWeight: '600',
+    color: '#000000',
   },
   taskList: {
     height: '100%',

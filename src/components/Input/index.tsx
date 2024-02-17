@@ -33,18 +33,21 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     fontWeight: '500',
     marginBottom: 6,
+    color: '#000000',
   },
   input: {
     fontSize: 16,
     borderWidth: 1,
     borderColor: '#989DA8',
-    paddingVertical: Platform.OS === 'android' ? 0 : 14,
+    paddingVertical: 14,
     paddingHorizontal: 16,
     borderRadius: 4,
+    color: '#000000',
   },
   multiline: {
     height: 122,
     paddingVertical: 16,
+    textAlignVertical: 'top',
   },
 });
 

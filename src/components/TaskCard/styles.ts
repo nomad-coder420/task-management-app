@@ -31,9 +31,16 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 8,
     width: '80%',
+    color: '#000000',
   },
   editButton: {
     marginLeft: 16,
+  },
+  editText: {
+    color: '#000000',
+  },
+  description: {
+    color: '#000000',
   },
   buttonTrayContainer: {
     position: 'absolute',

@@ -31,7 +31,7 @@ const EditTaskScreen = ({navigation, route}: INavigationScreenProps) => {
             multiline
           />
         </View>
-        <View>
+        <View style={styles.footer}>
           <Button
             text="Delete"
             onPress={() => {
@@ -73,6 +73,9 @@ const styles = StyleSheet.create({
   },
   deleteButton: {
     color: '#DA3A3A',
+  },
+  footer: {
+    paddingBottom: 16,
   },
 });
 

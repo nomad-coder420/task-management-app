@@ -113,11 +113,13 @@ const TaskCard = ({item, onPress, onDelete, onComplete}: IProps) => {
             </Text>
             {editVisible && (
               <TouchableOpacity onPress={onPress} style={styles.editButton}>
-                <Text>Edit</Text>
+                <Text style={styles.editText}>Edit</Text>
               </TouchableOpacity>
             )}
           </View>
-          <Text numberOfLines={2}>{description}</Text>
+          <Text numberOfLines={2} style={styles.description}>
+            {description}
+          </Text>
         </Animated.View>
       </PanGestureHandler>
       <View style={styles.buttonTrayContainer}>
