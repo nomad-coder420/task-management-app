@@ -5,7 +5,6 @@ import {PanGestureHandler, State} from 'react-native-gesture-handler';
 import Animated, {
   useSharedValue,
   withSpring,
-  runOnJS,
   withTiming,
 } from 'react-native-reanimated';
 
@@ -25,6 +24,7 @@ const TaskCard = ({item, onPress, onDelete, onComplete}: IProps) => {
   const backgroundColor = useSharedValue('#fff');
 
   const [buttonsVisible, setButtonsVisible] = useState(false);
+  const [editVisible, setEditVisible] = useState(item.state === 'PENDING');
 
   const {title = '', description = ''} = item;
 
@@ -85,6 +85,7 @@ const TaskCard = ({item, onPress, onDelete, onComplete}: IProps) => {
     });
     backgroundColor.value = withTiming('#D6F2E2');
     onComplete();
+    setEditVisible(false);
   };
 
   useEffect(() => {
@@ -110,7 +111,7 @@ const TaskCard = ({item, onPress, onDelete, onComplete}: IProps) => {
             <Text style={styles.taskTitle} numberOfLines={1}>
               {title}
             </Text>
-            {item.state === 'PENDING' && (
+            {editVisible && (
               <TouchableOpacity onPress={onPress} style={styles.editButton}>
                 <Text>Edit</Text>
               </TouchableOpacity>
