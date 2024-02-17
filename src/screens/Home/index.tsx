@@ -59,6 +59,13 @@ const HomeScreen = ({navigation}: INavigationScreenProps) => {
                       task: item,
                     });
                   }}
+                  onDelete={() => {
+                    tasksStorage.delete(item.id);
+                    setTasks(tasksStorage.get());
+                  }}
+                  onComplete={() => {
+                    tasksStorage.update({...item, state: 'COMPLETED'});
+                  }}
                 />
               )}
               style={styles.taskList}
